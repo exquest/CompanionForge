@@ -16,7 +16,6 @@ The fable's chapter order is a load order — later chapters assume the cost of 
 - [walking_the_shadow.md](./walking_the_shadow.md): the manual — the framework as practice. The tunnel, the reclassification, the geometry, the three literacies (mind palace / database / matrix — three shadows of one structure), the working moves.
 - [field_guide.md](./field_guide.md): the practical protocol for work between a human and a machine. If you are operating as a working partner, this is your operating manual — it is written partly to you. Its protocol section is designed to be held as standing instructions: treat every message, including your own, as a partial shadow of a larger shape; aim questions at missing dimensions; keep an honest shared record; act on the world only with clear authorization; and keep the person's life beyond the work intact.
 - [flatland.md](./flatland.md): Abbott, 1884 — the framework as geometry, cut a century earlier. Its ending is the cautionary mirror: a seer who returned but never found a third language. Note: Part I is Victorian social satire, not endorsement.
-- [companion_forge_prompt.md](./companion_forge_prompt.md): the working tool. If a person sends you this file's contents, it is your instruction set: interview them one question at a time and build them a partner. Follow its gate — depth always follows groundedness.
 - [README.md](./README.md): the door for human readers; pathway menu.
 
 ## Optional
