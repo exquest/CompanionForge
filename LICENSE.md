@@ -10,16 +10,16 @@ The following are creative works — written and visual — licensed under [CC B
 
 - `shadowland.md` — *Shadowland: A Romance of Inference* (the unified book: dedication, preface, Part One — the fable, Part Two — "This World", postamble)
 - `walking_the_shadow.md` — *Walking the Shadow* (the manual)
-- `field_guide.md` — *The Shadowland Field Guide* (its protocol block and templates are meant to be copied and used freely, which this license already permits; attribution is appreciated but not required for the operational blocks in practice)
+- `field_guide.md` — *The Shadowland Field Guide* (as an additional permission beyond CC BY, its protocol blocks and templates — the parts built to be lifted into standing instructions — may be used without attribution; credit is appreciated, never required, for those blocks)
 - `decision_journal.md` — the build record: the making of the second edition, kept as artifact
 - `README.md` — the door: the pathway menu for human readers
 - `CompanionForge_Architecture_for_Inference.jpg` — the one-page visual overview of the repository
 
-*A note on the fable, in keeping with the book's own preface: it was cast between a person and a language model. Attribution, where given, should reflect that it is a constructed work of joint authorship; the human author is not named within the work by choice.*
+*A note on the fable, in keeping with the book's own preface: it was cast between a person and a language model — a constructed work of joint authorship whose human author is unnamed within it by choice. Attribution that credits the work and this repository satisfies the license; no personal name is required, because none is given.*
 
 ## The prompt and tool files — MIT License
 
-The following are functional artifacts — instruction sets meant to be copied, run, modified, and built upon freely. Licensed under the [MIT License](https://opensource.org/licenses/MIT):
+The following are functional artifacts — prompts, indexes, and records meant to be copied, used, modified, and built upon freely. Licensed under the [MIT License](https://opensource.org/licenses/MIT):
 
 - `companion_forge_prompt.md` — the Companion Forge
 - `CompanionForge_SelfUpdating.md` — the self-updating build of the Forge, for a persistent Project (a reader's contribution)
@@ -55,4 +55,4 @@ SOFTWARE.
 
 `flatland.md` is Edwin A. Abbott's *Flatland: A Romance of Many Dimensions* (1884), which is in the public domain. Transcription sourced from Project Gutenberg (eBook #201). No rights are claimed over it.
 
-<!-- CompanionForge v2.1.0 -->
+<!-- CompanionForge v2.1.1 -->
