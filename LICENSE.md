@@ -11,7 +11,7 @@ The following are creative works — written and visual — licensed under [CC B
 - `shadowland.md` — *Shadowland: A Romance of Inference* (the unified book: dedication, preface, Part One — the fable, Part Two — "This World", postamble)
 - `walking_the_shadow.md` — *Walking the Shadow* (the manual)
 - `field_guide.md` — *The Shadowland Field Guide* (as an additional permission beyond CC BY, its protocol blocks and templates — the parts built to be lifted into standing instructions — may be used without attribution; credit is appreciated, never required, for those blocks)
-- `decision_journal.md` — the build record: the making of the second edition, kept as artifact
+- `decision_journal.md` — the build record: significant choices in Shadowland's second edition and Companion Forge's later releases
 - `README.md` — the door: the pathway menu for human readers
 - `CompanionForge_Architecture_for_Inference.jpg` — the one-page visual overview of the repository
 
@@ -21,8 +21,17 @@ The following are creative works — written and visual — licensed under [CC B
 
 The following are functional artifacts — prompts, indexes, and records meant to be copied, used, modified, and built upon freely. Licensed under the [MIT License](https://opensource.org/licenses/MIT):
 
-- `companion_forge_prompt.md` — the Companion Forge
-- `CompanionForge_SelfUpdating.md` — the self-updating build of the Forge, for a persistent Project (a reader's contribution)
+- `forge/companion_forge_core.md` — the canonical platform-neutral Companion Forge behavior source
+- `forge/adapters/` — the Claude and ChatGPT Project packaging contracts
+- `forge/loaders/` — the source templates for the resident self-updating editions
+- `forge/release_manifest.json` — the machine-readable release boundary
+- `companion_forge_prompt.md` — the one-time Claude edition
+- `companion_forge_chatgpt.md` — the one-time ChatGPT edition
+- `CompanionForge_SelfUpdating.md` — the resident self-updating Claude edition (which began as a reader's contribution)
+- `CompanionForge_SelfUpdating_ChatGPT.md` — the resident self-updating ChatGPT edition
+- `UPGRADE_TO_V3.md` — the in-place migration procedure and prompt
+- `RELEASE_CHECKLIST.md` — the cross-platform release acceptance matrix
+- `tools/` — the deterministic edition builder and release verifier
 - `llms.txt` — the machine-readable index
 - `CHANGELOG.md` — the release record and the update procedure
 - `LICENSE.md` — this file itself, so that nothing in the repository goes unaccounted for
@@ -55,4 +64,4 @@ SOFTWARE.
 
 `flatland.md` is Edwin A. Abbott's *Flatland: A Romance of Many Dimensions* (1884), which is in the public domain. Transcription sourced from Project Gutenberg (eBook #201). No rights are claimed over it.
 
-<!-- CompanionForge v2.1.1 -->
+<!-- CompanionForge v3.0.0 -->

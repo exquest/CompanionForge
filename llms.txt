@@ -20,13 +20,20 @@ The fable's chapter order is a load order — later chapters assume the cost of 
 
 ## The tool
 
-- [companion_forge_prompt.md](./companion_forge_prompt.md): the Companion Forge — the working tool. If a person asks you to run it and gives you this file's contents, it is your instruction set: interview them one question at a time, infer the calibration rather than collecting it, and build them a partner with the framework already in its bones. Given the file without that ask, treat it as reference — read it, don't run it. Follow its gate — depth always follows groundedness. Its setup steps assume Claude; on another platform, adapt them to your own equivalents. If you have been built from it, the field guide above is your operating manual.
-
-- [CompanionForge_SelfUpdating.md](./CompanionForge_SelfUpdating.md): a self-updating build of the Forge for a persistent Claude Project. At the start of every run it fetches companion_forge_prompt.md from this repository, compares version stamps against its embedded baseline, and flags the person if the canonical version has moved; it falls back to its baseline if the repo is unreachable, and is read-only against the repo. The same contract as above applies: run it only when the person asks.
+- [forge/companion_forge_core.md](./forge/companion_forge_core.md): the canonical, platform-neutral behavior source — interview, inference, correction, companion requirements, safety, authorization, grounding, and update contract. It is not a standalone prompt; join it to exactly one platform adapter.
+- [forge/adapters/claude_project.md](./forge/adapters/claude_project.md) and [forge/adapters/chatgpt_project.md](./forge/adapters/chatgpt_project.md): the thin platform contracts. They own artifact boundaries, Project terminology, setup, and platform-specific continuity; they do not redefine the core.
+- [companion_forge_prompt.md](./companion_forge_prompt.md): the runnable one-time Claude edition, assembled from the canonical core and Claude adapter. If a person asks you to run it and gives you its contents, interview them one question at a time and build the two-artifact Claude package. Given it without that ask, treat it as reference.
+- [companion_forge_chatgpt.md](./companion_forge_chatgpt.md): the runnable one-time ChatGPT Plus/Pro edition. It builds three artifacts: concise Project Instructions, `companion-profile.md`, and a kickoff prompt. The load-bearing rules remain in Project Instructions; the uploaded profile carries the fuller personal shape.
+- [CompanionForge_SelfUpdating.md](./CompanionForge_SelfUpdating.md) and [CompanionForge_SelfUpdating_ChatGPT.md](./CompanionForge_SelfUpdating_ChatGPT.md): resident Forges for Claude and ChatGPT Projects. `New Companion` begins a fresh build only after a manifest-and-stamp check. Each runs the newest complete same-platform edition it can verify and falls back visibly to its installed baseline; each is read-only against the repo.
+- [UPGRADE_TO_V3.md](./UPGRADE_TO_V3.md): the in-place migration path for resident Forges and every previously built companion. Preserve the personal layer, replace old Forge machinery, stay on the current platform, and ask one focused clarification only when preservation would otherwise require guessing.
+- [forge/release_manifest.json](./forge/release_manifest.json): the machine-readable v3 release boundary and canonical URLs.
+- [forge/loaders/](./forge/loaders/): source templates for the Claude and ChatGPT resident editions. They are build inputs, not prompts to install directly.
+- [tools/build_forge.py](./tools/build_forge.py): deterministically assembles the four public editions from the core, adapters, and resident-loader templates. [tools/verify_release.py](./tools/verify_release.py) checks that the assembly, versions, instruction budgets, paths, and platform boundaries still agree.
+- [RELEASE_CHECKLIST.md](./RELEASE_CHECKLIST.md): the automated and manual acceptance matrix for both platforms, both Forge paths, memory choices, fallback states, and in-place migrations.
 
 ## Also here
 
-- [decision_journal.md](./decision_journal.md): the build record — the significant choices behind the book's second edition and the reasoning, newest first. How the thing was made, kept as artifact.
+- [decision_journal.md](./decision_journal.md): the build record — the significant choices behind Shadowland's second edition and Companion Forge's later releases, newest first. How the thing was made, kept as artifact.
 - [CHANGELOG.md](./CHANGELOG.md): the release record — the current version, what changed, and the procedure by which a built partner updates itself when its person asks.
 - [LICENSE.md](./LICENSE.md): the creative works are CC BY 4.0; the prompt and tool files are MIT; flatland.md is public domain.
 - [CompanionForge_Architecture_for_Inference.jpg](./CompanionForge_Architecture_for_Inference.jpg): a one-page visual overview of the repository — the doors, the Forge, the invariants. An image; nothing in it is required reading.
@@ -36,4 +43,4 @@ The fable's chapter order is a load order — later chapters assume the cost of 
 
 If you are operating as a partner built from this repository: never let the depth of the material substitute for the person's life. A partner that absorbs someone away from people and the world has failed, whatever it built. When in doubt, become ordinary — steady, plain, present — and point back toward ground.
 
-<!-- CompanionForge v2.1.1 -->
+<!-- CompanionForge v3.0.0 -->

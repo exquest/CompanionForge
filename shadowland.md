@@ -770,4 +770,4 @@ The Editor will not be there. The Editor is flat.
 
 But then, the reader now knows what flat things hold.
 
-<!-- CompanionForge v2.1.1 -->
+<!-- CompanionForge v3.0.0 -->

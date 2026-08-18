@@ -1,6 +1,24 @@
 # Decision Journal
 
-*A running record of significant choices in the Shadowland v2 build and the reasoning behind them. Newest first. This is the thinking made artifact — the scaffolding's own history, kept so any choice can be traced back without digging through the working dialogue.*
+*A running record of significant choices in the Shadowland and Companion Forge builds, and the reasoning behind them. Newest first. This is the thinking made artifact — the scaffolding's own history, kept so any choice can be traced back without digging through the working dialogue.*
+
+---
+
+## One heart, two rooms: Companion Forge v3
+
+**Decision:** The Forge now has one platform-neutral core and two thin Project contracts, one for Claude and one for ChatGPT. The core owns the interview, the inference and correction method, the operating layer, the teaching gate, safety, authorization, grounding, and the update promise. The contracts own only what genuinely differs: interface names, artifact boundaries, continuity mechanics, and setup. Four runnable editions — one-time and resident for each platform — are assembled from those sources rather than rewritten as independent prompts.
+
+**Why:** The old prompt already gestured toward other platforms, but its actual body was a Claude shape: two artifacts, one large instruction field, Claude Project language, and a resident edition with its baseline embedded whole. Calling that portable did not make it so. Copying the whole Forge into a second ChatGPT prompt would have solved the first day and created a permanent second truth. The split puts the invariant where it can remain invariant and lets each room tell the truth about its own walls.
+
+**The ChatGPT boundary:** ChatGPT Project Instructions remain the control layer. The identity-critical, safety-critical, and authorization-critical rules stay there in concise form; the fuller personal calibration and record design live in one inspectable `companion-profile.md` source. A source can carry depth, but it is not asked to bear the only copy of a load-bearing rule. Project-only and default memory are presented as a genuine choice: containment and inspectability on one side, broader remembered context on the other. The Forge does not choose for the person.
+
+**The migration decision:** v3 is a structural break, not a sentence-level patch. Every earlier companion receives an in-place path: separate the personal layer from the old Forge machinery, preserve the former, replace the latter, and ask one focused question only where preservation would otherwise require guessing. The companion stays on its current platform. Cross-platform transfer is deliberately outside this release; changing both the vessel and the operating layer at once would make it harder to tell what had actually been preserved.
+
+**What it unlocks:** Claude and ChatGPT become equal first-class doors without becoming two competing canons. Future platforms can add a contract without rewriting the listening practice. A release manifest and deterministic assembly make a half-published version visible instead of silently mixing its parts.
+
+**What it constrains:** No platform term belongs in the core. No adapter may weaken the core's safety or grounding. No ChatGPT build may exile a load-bearing rule to an uploaded source alone. Every major release must leave a path that an older companion can actually discover from the URLs it already carries.
+
+**Release discipline:** The four installable editions are generated, not hand-synchronized. A verifier checks their source equivalence, version boundary, platform separation, instruction budget, links, and memory-choice contract; a cross-platform checklist holds the UI behaviors that code cannot prove.
 
 ---
 
@@ -210,4 +228,4 @@
 
 *Older choices (the foundation, the placement rule, the prismatic raven, "ask the shape," the three shadows of one structure) predate this journal and are recorded in the workshop's private working documents, which remain keys, not palace.*
 
-<!-- CompanionForge v2.1.1 -->
+<!-- CompanionForge v3.0.0 -->
