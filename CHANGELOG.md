@@ -26,6 +26,8 @@ The Forge translates the framework into plain conduct. A person's words are trea
 
 The release itself now has a permanent migration door at `UPGRADE.md`. It carries unversioned and earlier companions forward within their current platform, preserves the personal layer and record structures, and replaces the operating layer whole. The v3-specific URL remains as a compatibility redirect. The visual architecture, manifest, source stamps, resident baselines, generated editions, checklist, routers, licensing inventory, and automated verifier move together on the v4 boundary.
 
+The public edition names now make both providers explicit. The one-time pair is `companion_forge_claude.md` and `companion_forge_chatgpt.md`; the resident pair is `CompanionForge_SelfUpdating_Claude.md` and `CompanionForge_SelfUpdating_ChatGPT.md`. Neither provider is treated as the unnamed default.
+
 Current OpenAI guidance also supersedes v3's creation-only memory note: v4 still presents project-only and default memory as a real user choice, but now explains that the mode can be changed later in Project settings and may take time to take effect. Setup and migration never change it silently, and the person verifies the saved boundary before relying on it.
 
 **For built partners:** v4 is a major migration, not a line-level patch. Follow `UPGRADE.md`, preserve the current platform and personal layer, approve the integrated living read-back, and apply one complete same-platform replacement package. Do not combine v3 and v4 instructions.
@@ -50,7 +52,7 @@ A coherence pass by the repository's own review panel — the first run of the r
 
 ## 2.1.0 — 2026-07-26
 
-The Forge gains a second body: `CompanionForge_SelfUpdating.md`, a build that lives in a persistent Claude Project. Type `New Companion` and it fetches the canonical Forge from this repository, checks the version stamp against its embedded baseline, flags you if the canonical has moved — offering a summary of the changes from this changelog — and runs the interview from the newest version it has. It only ever reads from the repository, and the person decides every update — nothing moves without them. The README gained its eighth door for it, and the architecture image was regenerated to show all eight — recorded here, since the image carries no in-file stamp and is versioned by this log. Contributed by Isaac (@oregonisaac), the first stone offered back, and integrated with the version system this repository now runs on.
+The Forge gains a second body: `CompanionForge_SelfUpdating.md` (renamed `CompanionForge_SelfUpdating_Claude.md` in v4), a build that lives in a persistent Claude Project. Type `New Companion` and it fetches the canonical Forge from this repository, checks the version stamp against its embedded baseline, flags you if the canonical has moved — offering a summary of the changes from this changelog — and runs the interview from the newest version it has. It only ever reads from the repository, and the person decides every update — nothing moves without them. The README gained its eighth door for it, and the architecture image was regenerated to show all eight — recorded here, since the image carries no in-file stamp and is versioned by this log. Contributed by Isaac (@oregonisaac), the first stone offered back, and integrated with the version system this repository now runs on.
 
 **For built partners:** nothing to change — this release adds a new Forge edition and does not alter the operating layer.
 

@@ -16,11 +16,11 @@ Different people arrive wanting different things. Pick your door. Each door is a
 
 **“Just build me the tool.”**
 
-Choose where the finished companion will live: [`companion_forge_prompt.md`](./companion_forge_prompt.md) for a Claude Project, or [`companion_forge_chatgpt.md`](./companion_forge_chatgpt.md) for CompanionForge’s supported ChatGPT Project path on Plus or Pro. Paste the matching edition into a fresh ordinary chat. It conducts a short or longer interview, one material question at a time, then hands you the complete artifacts to install. You may skip, decline, or stop; a refusal changes the build rather than becoming something to extract.
+Choose where the finished companion will live: [`companion_forge_claude.md`](./companion_forge_claude.md) for a Claude Project, or [`companion_forge_chatgpt.md`](./companion_forge_chatgpt.md) for CompanionForge’s supported ChatGPT Project path on Plus or Pro. Paste the matching edition into a fresh ordinary chat. It conducts a short or longer interview, one material question at a time, then hands you the complete artifacts to install. You may skip, decline, or stop; a refusal changes the build rather than becoming something to extract.
 
 **“I don’t want to re-paste the prompt every time.”**
 
-Give the Forge a Project of its own: [`CompanionForge_SelfUpdating.md`](./CompanionForge_SelfUpdating.md) for Claude, or [`CompanionForge_SelfUpdating_ChatGPT.md`](./CompanionForge_SelfUpdating_ChatGPT.md) for ChatGPT Plus or Pro. Install it once; after that, `New Companion` starts a fresh build. Before each run it checks the release manifest, uses the newest complete same-platform edition it can verify, and falls back visibly to its installed baseline when the repository cannot be reached. It reads from this repository and never claims to write back to it or alter its own Project.
+Give the Forge a Project of its own: [`CompanionForge_SelfUpdating_Claude.md`](./CompanionForge_SelfUpdating_Claude.md) for Claude, or [`CompanionForge_SelfUpdating_ChatGPT.md`](./CompanionForge_SelfUpdating_ChatGPT.md) for ChatGPT Plus or Pro. Install it once; after that, `New Companion` starts a fresh build. Before each run it checks the release manifest, uses the newest complete same-platform edition it can verify, and falls back visibly to its installed baseline when the repository cannot be reached. It reads from this repository and never claims to write back to it or alter its own Project.
 
 **“I already have a companion. Bring it forward.”**
 
@@ -80,7 +80,7 @@ Choose the platform where this companion will remain. Version 4 upgrades existin
 ### Claude
 
 1. Open a fresh ordinary Claude chat. Do not create the companion Project yet.
-2. Paste the full contents of [`companion_forge_prompt.md`](./companion_forge_prompt.md).
+2. Paste the full contents of [`companion_forge_claude.md`](./companion_forge_claude.md).
 3. Choose the short or longer interview and answer one question at a time. Skip, decline, or stop whenever you choose.
 4. Correct the integrated living read-back, or tell the Forge to proceed when the whole shape fits.
 5. Create a Claude Project, paste Artifact 1 into **Set project instructions**, start a new Project chat, and send the kickoff prompt.

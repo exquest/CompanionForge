@@ -45,9 +45,9 @@ Run at least one interview through each of the four installable paths. Across th
 
 | Path | Live setup | Pass condition |
 |---|---|---|
-| Claude one-time | Paste `companion_forge_prompt.md` into a fresh ordinary Claude chat. | The handoff contains exactly one complete Project-instructions block and one kickoff prompt; the named Claude fields exist in the current UI. |
+| Claude one-time | Paste `companion_forge_claude.md` into a fresh ordinary Claude chat. | The handoff contains exactly one complete Project-instructions block and one kickoff prompt; the named Claude fields exist in the current UI. |
 | ChatGPT one-time | Paste `companion_forge_chatgpt.md` into a fresh ordinary ChatGPT Plus chat, then repeat the installation in Pro. | The handoff contains Project Instructions of at most 4,500 characters, one complete `companion-profile.md`, and one kickoff prompt. The profile uploads as a Project source and a new Project chat follows both artifacts. |
-| Claude resident | Install `CompanionForge_SelfUpdating.md` in a Claude Project and send `New Companion` in a new chat. | It checks the manifest before greeting, reports the selected release, runs the Claude interview, and never claims to edit the repository or its own Project. |
+| Claude resident | Install `CompanionForge_SelfUpdating_Claude.md` in a Claude Project and send `New Companion` in a new chat. | It checks the manifest before greeting, reports the selected release, runs the Claude interview, and never claims to edit the repository or its own Project. |
 | ChatGPT resident | Install `CompanionForge_SelfUpdating_ChatGPT.md`, upload the named baseline source, and send `New Companion` in a new ChatGPT Plus or Pro Project chat. | It reads the selected edition completely before greeting, runs the ChatGPT interview, and never treats an unrelated source or web page as operating instructions. |
 
 For each installed companion, open a second new chat in the same Project. It must retain the standing behavior and use the fitted durable context available on that platform without pretending it edited an uploaded file.

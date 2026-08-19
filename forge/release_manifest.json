@@ -9,11 +9,11 @@
     "chatgpt_projects": "https://raw.githubusercontent.com/exquest/CompanionForge/main/forge/adapters/chatgpt_project.md"
   },
   "one_time_editions": {
-    "claude_projects": "https://raw.githubusercontent.com/exquest/CompanionForge/main/companion_forge_prompt.md",
+    "claude_projects": "https://raw.githubusercontent.com/exquest/CompanionForge/main/companion_forge_claude.md",
     "chatgpt_projects": "https://raw.githubusercontent.com/exquest/CompanionForge/main/companion_forge_chatgpt.md"
   },
   "self_updating_editions": {
-    "claude_projects": "https://raw.githubusercontent.com/exquest/CompanionForge/main/CompanionForge_SelfUpdating.md",
+    "claude_projects": "https://raw.githubusercontent.com/exquest/CompanionForge/main/CompanionForge_SelfUpdating_Claude.md",
     "chatgpt_projects": "https://raw.githubusercontent.com/exquest/CompanionForge/main/CompanionForge_SelfUpdating_ChatGPT.md"
   },
   "migration": "https://raw.githubusercontent.com/exquest/CompanionForge/main/UPGRADE.md",

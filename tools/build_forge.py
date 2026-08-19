@@ -80,9 +80,9 @@ def expected_outputs() -> dict[str, str]:
     )
 
     return {
-        "companion_forge_prompt.md": claude,
+        "companion_forge_claude.md": claude,
         "companion_forge_chatgpt.md": chatgpt,
-        "CompanionForge_SelfUpdating.md": render_loader(
+        "CompanionForge_SelfUpdating_Claude.md": render_loader(
             "forge/loaders/self_updating_claude.md",
             version=version,
             stamp=stamp,

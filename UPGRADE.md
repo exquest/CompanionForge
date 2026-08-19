@@ -32,7 +32,7 @@ A resident Forge is the builder that responds to `New Companion`, not a
 companion already calibrated to a person.
 
 - **Claude:** open the current
-  [`CompanionForge_SelfUpdating.md`](./CompanionForge_SelfUpdating.md), replace
+  [`CompanionForge_SelfUpdating_Claude.md`](./CompanionForge_SelfUpdating_Claude.md), replace
   the Project instructions with its complete Artifact 1, and start a new chat
   with `New Companion`.
 - **ChatGPT:** open the current
@@ -52,7 +52,7 @@ see its standing instructions, give it the saved copy when it asks. If it has no
 web access, attach a complete release set: the current
 [`forge/release_manifest.json`](./forge/release_manifest.json),
 [`CHANGELOG.md`](./CHANGELOG.md), and the one-time edition for the same platform
-— [`companion_forge_prompt.md`](./companion_forge_prompt.md) for Claude or
+— [`companion_forge_claude.md`](./companion_forge_claude.md) for Claude or
 [`companion_forge_chatgpt.md`](./companion_forge_chatgpt.md) for ChatGPT.
 
 ```text

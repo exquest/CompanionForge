@@ -84,9 +84,9 @@ def main() -> int:
         Path("forge/loaders/self_updating_claude.md"),
         Path("forge/loaders/self_updating_chatgpt.md"),
         Path("forge/release_manifest.json"),
-        Path("companion_forge_prompt.md"),
+        Path("companion_forge_claude.md"),
         Path("companion_forge_chatgpt.md"),
-        Path("CompanionForge_SelfUpdating.md"),
+        Path("CompanionForge_SelfUpdating_Claude.md"),
         Path("CompanionForge_SelfUpdating_ChatGPT.md"),
         Path("UPGRADE.md"),
         Path("UPGRADE_TO_V3.md"),
@@ -98,6 +98,15 @@ def main() -> int:
     for path in sorted(required):
         if not (ROOT / path).is_file():
             failures.append(f"required release file is missing: {path}")
+
+    for path in (
+        Path("companion_forge_prompt.md"),
+        Path("CompanionForge_SelfUpdating.md"),
+    ):
+        if (ROOT / path).exists():
+            failures.append(
+                f"provider-implicit Claude edition path must be removed: {path}"
+            )
 
     for relative_path, expected in expected_outputs().items():
         path = ROOT / relative_path
@@ -183,7 +192,7 @@ def main() -> int:
                 f"platform-specific term leaked into canonical core: {forbidden}"
             )
 
-    claude_edition = (ROOT / "companion_forge_prompt.md").read_text(encoding="utf-8")
+    claude_edition = (ROOT / "companion_forge_claude.md").read_text(encoding="utf-8")
     chatgpt_edition = (ROOT / "companion_forge_chatgpt.md").read_text(encoding="utf-8")
     if "ChatGPT" in claude_edition:
         failures.append("ChatGPT term leaked into Claude one-time edition")
@@ -199,7 +208,7 @@ def main() -> int:
     upgrade = (ROOT / "UPGRADE.md").read_text(encoding="utf-8")
     upgrade_compat = (ROOT / "UPGRADE_TO_V3.md").read_text(encoding="utf-8")
     release_checklist = (ROOT / "RELEASE_CHECKLIST.md").read_text(encoding="utf-8")
-    claude_loader = (ROOT / "CompanionForge_SelfUpdating.md").read_text(
+    claude_loader = (ROOT / "CompanionForge_SelfUpdating_Claude.md").read_text(
         encoding="utf-8"
     )
     chatgpt_loader = (ROOT / "CompanionForge_SelfUpdating_ChatGPT.md").read_text(
@@ -346,6 +355,8 @@ def main() -> int:
         (
             "ChatGPT Project path on Plus or Pro",
             "can later select **Default memory** or **Project-only memory** in Project settings",
+            "[`companion_forge_claude.md`](./companion_forge_claude.md)",
+            "[`CompanionForge_SelfUpdating_Claude.md`](./CompanionForge_SelfUpdating_Claude.md)",
         ),
     )
     obsolete_memory_claims = (
@@ -398,9 +409,9 @@ def main() -> int:
         ("canonical_core",): "forge/companion_forge_core.md",
         ("adapters", "claude_projects"): "forge/adapters/claude_project.md",
         ("adapters", "chatgpt_projects"): "forge/adapters/chatgpt_project.md",
-        ("one_time_editions", "claude_projects"): "companion_forge_prompt.md",
+        ("one_time_editions", "claude_projects"): "companion_forge_claude.md",
         ("one_time_editions", "chatgpt_projects"): "companion_forge_chatgpt.md",
-        ("self_updating_editions", "claude_projects"): "CompanionForge_SelfUpdating.md",
+        ("self_updating_editions", "claude_projects"): "CompanionForge_SelfUpdating_Claude.md",
         (
             "self_updating_editions",
             "chatgpt_projects",

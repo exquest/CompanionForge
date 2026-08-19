@@ -25,9 +25,9 @@ The following are functional artifacts — prompts, indexes, and records meant t
 - `forge/adapters/` — the Claude and ChatGPT Project packaging contracts
 - `forge/loaders/` — the source templates for the resident self-updating editions
 - `forge/release_manifest.json` — the machine-readable release boundary
-- `companion_forge_prompt.md` — the one-time Claude edition
+- `companion_forge_claude.md` — the one-time Claude edition
 - `companion_forge_chatgpt.md` — the one-time ChatGPT edition
-- `CompanionForge_SelfUpdating.md` — the resident self-updating Claude edition (which began as a reader's contribution)
+- `CompanionForge_SelfUpdating_Claude.md` — the resident self-updating Claude edition (which began as a reader's contribution)
 - `CompanionForge_SelfUpdating_ChatGPT.md` — the resident self-updating ChatGPT edition
 - `UPGRADE.md` — the stable, version-aware in-place migration procedure and prompt
 - `UPGRADE_TO_V3.md` — the retained compatibility address for the historical v3 migration path
