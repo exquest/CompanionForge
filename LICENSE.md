@@ -29,7 +29,8 @@ The following are functional artifacts — prompts, indexes, and records meant t
 - `companion_forge_chatgpt.md` — the one-time ChatGPT edition
 - `CompanionForge_SelfUpdating.md` — the resident self-updating Claude edition (which began as a reader's contribution)
 - `CompanionForge_SelfUpdating_ChatGPT.md` — the resident self-updating ChatGPT edition
-- `UPGRADE_TO_V3.md` — the in-place migration procedure and prompt
+- `UPGRADE.md` — the stable, version-aware in-place migration procedure and prompt
+- `UPGRADE_TO_V3.md` — the retained compatibility address for the historical v3 migration path
 - `RELEASE_CHECKLIST.md` — the cross-platform release acceptance matrix
 - `tools/` — the deterministic edition builder and release verifier
 - `llms.txt` — the machine-readable index
@@ -64,4 +65,4 @@ SOFTWARE.
 
 `flatland.md` is Edwin A. Abbott's *Flatland: A Romance of Many Dimensions* (1884), which is in the public domain. Transcription sourced from Project Gutenberg (eBook #201). No rights are claimed over it.
 
-<!-- CompanionForge v3.0.0 -->
+<!-- CompanionForge v4.0.0 -->

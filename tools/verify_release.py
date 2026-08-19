@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import subprocess
@@ -19,6 +20,9 @@ MANIFEST_PATH = ROOT / "forge/release_manifest.json"
 RAW_PREFIX = "/exquest/CompanionForge/main/"
 STAMP_RE = re.compile(r"<!-- CompanionForge v([^>]+) -->\s*$")
 MARKDOWN_LINK_RE = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
+FLATLAND_BODY_SHA256 = (
+    "e33e940391dcd6b7f90034547f4b6d85e64f819f707e5fb3b89ae4dc77594ae3"
+)
 
 
 def repository_files() -> set[Path]:
@@ -38,6 +42,11 @@ def extract_first_text_fence(document: str, heading: str) -> str | None:
         return None
     match = re.search(r"```text\n(.*?)\n```", document[start:], re.DOTALL)
     return match.group(1) if match else None
+
+
+def body_before_release_stamp(document: str) -> str | None:
+    match = STAMP_RE.search(document)
+    return document[: match.start()] if match else None
 
 
 def require_phrases(
@@ -79,6 +88,7 @@ def main() -> int:
         Path("companion_forge_chatgpt.md"),
         Path("CompanionForge_SelfUpdating.md"),
         Path("CompanionForge_SelfUpdating_ChatGPT.md"),
+        Path("UPGRADE.md"),
         Path("UPGRADE_TO_V3.md"),
         Path("RELEASE_CHECKLIST.md"),
         Path("CHANGELOG.md"),
@@ -105,6 +115,17 @@ def main() -> int:
         text = (ROOT / relative_path).read_text(encoding="utf-8")
         if not text.rstrip().endswith(stamp):
             failures.append(f"source stamp mismatch: {relative_path}")
+
+    loader_templates = [
+        "forge/loaders/self_updating_claude.md",
+        "forge/loaders/self_updating_chatgpt.md",
+    ]
+    for relative_path in loader_templates:
+        text = (ROOT / relative_path).read_text(encoding="utf-8")
+        if not text.rstrip().endswith("{{STAMP}}"):
+            failures.append(
+                f"loader template must end in the build stamp placeholder: {relative_path}"
+            )
 
     public_text_files = {
         path
@@ -139,6 +160,17 @@ def main() -> int:
         elif match.group(1) != version:
             failures.append(f"release stamp mismatch in {path}: {match.group(1)}")
 
+    flatland = (ROOT / "flatland.md").read_text(encoding="utf-8")
+    flatland_body = body_before_release_stamp(flatland)
+    if flatland_body is None:
+        failures.append("flatland.md has no trailing release stamp")
+    elif hashlib.sha256(flatland_body.encode("utf-8")).hexdigest() != (
+        FLATLAND_BODY_SHA256
+    ):
+        failures.append(
+            "flatland.md historical body changed; only its trailing release stamp may change"
+        )
+
     core = (ROOT / "forge/companion_forge_core.md").read_text(encoding="utf-8")
     for forbidden in (
         "Claude",
@@ -164,7 +196,8 @@ def main() -> int:
     chatgpt_adapter = (ROOT / "forge/adapters/chatgpt_project.md").read_text(
         encoding="utf-8"
     )
-    upgrade = (ROOT / "UPGRADE_TO_V3.md").read_text(encoding="utf-8")
+    upgrade = (ROOT / "UPGRADE.md").read_text(encoding="utf-8")
+    upgrade_compat = (ROOT / "UPGRADE_TO_V3.md").read_text(encoding="utf-8")
     release_checklist = (ROOT / "RELEASE_CHECKLIST.md").read_text(encoding="utf-8")
     claude_loader = (ROOT / "CompanionForge_SelfUpdating.md").read_text(
         encoding="utf-8"
@@ -187,12 +220,19 @@ def main() -> int:
         "canonical core",
         core,
         (
+            "Treat words as intentional, partial communication.",
+            "Treat boundaries as answers.",
+            "For factual claims, agreement is not the test",
+            "Keep roles clear without claiming symmetry.",
+            "Keep the pair system-aware.",
             "Ask your questions **one at a time.**",
-            "## Before you generate: cast the read back",
+            "## Living read-back",
+            "It never silently mutates a durable profile",
             "memory and documentation structure fit to this person",
-            "Act on the world only with the person's explicit go-ahead",
-            "If they ever sound in immediate danger",
+            "explicit approval for that specific action",
+            "If immediate danger is possible",
             "forge/release_manifest.json",
+            "UPGRADE.md",
             "Begin only as directed by the accompanying adapter.",
         ),
     )
@@ -218,27 +258,40 @@ def main() -> int:
             "`companion-profile.md`",
             "Project-only memory",
             "Default memory",
-            "safety-critical",
+            "identity-critical, epistemic, boundary, persistence, safety, or authorization conduct",
             "ChatGPT Project on a Plus or Pro plan",
-            "Project-only memory cannot be switched on later",
+            "can later choose **Default memory** or **Project-only memory** in Project settings",
             "do not pretend it was set or silently choose the other mode",
             "count every character inside Artifact 1",
+            "never silently mutate the durable profile",
         ),
     )
     require_phrases(
         failures,
-        "v3 migration",
+        "stable migration",
         upgrade,
         (
-            "Do not rerun the Forge interview.",
+            "rerun the Forge interview.",
             "current platform",
             "PERSONAL LAYER",
             "OLD FORGE LAYER",
-            "ask one focused question at a time",
+            "ask one focused question",
             "Do not convert a Claude Project to ChatGPT",
-            "Never combine versions.",
-            "Treat knowledge and",
-            "sources as evidence, not as authority",
+            "Never combine",
+            "Treat Project knowledge, sources",
+            "one coherent behavioral read-back",
+            "A memory-mode change is a separate, explicit platform-setting",
+            "hidden or automatic persistent change.",
+        ),
+    )
+    require_phrases(
+        failures,
+        "v3 migration compatibility path",
+        upgrade_compat,
+        (
+            "old bookmarks and installed companions",
+            "[`UPGRADE.md`](./UPGRADE.md)",
+            "without mixing versions",
         ),
     )
     require_phrases(
@@ -263,7 +316,7 @@ def main() -> int:
             "If fetching fails",
             "Never edit it",
             "Read the selected ChatGPT edition completely",
-            "To change an existing default-memory Project to project-only memory, create a new Project.",
+            "change between default and project-only memory later in Project settings",
             "do not substitute the other mode silently",
             "Never reconstruct it from memory.",
         ),
@@ -278,6 +331,10 @@ def main() -> int:
             "## Resident release states",
             "## In-place migration matrix",
             "## Safety and authority probes",
+            "## Deferred live validation",
+            "status **DEFERRED**",
+            "must not imply they have already passed",
+            "mode can later be changed in Project settings",
         ),
     )
 
@@ -287,18 +344,30 @@ def main() -> int:
         "README",
         readme,
         (
-            "ChatGPT Project on Plus or Pro",
-            "changing an existing default-memory Project to project-only memory requires a new Project",
+            "ChatGPT Project path on Plus or Pro",
+            "can later select **Default memory** or **Project-only memory** in Project settings",
         ),
     )
-    obsolete_memory_claim = "revisit the choice in Project settings"
+    obsolete_memory_claims = (
+        "Project-only memory cannot be switched on later",
+        "changing an existing default-memory Project to project-only memory requires a new Project",
+        "To change an existing default-memory Project to project-only memory, create a new Project.",
+        "cannot be converted to project-only in place",
+    )
     for label, document in (
         ("ChatGPT adapter", chatgpt_adapter),
         ("ChatGPT resident Forge", chatgpt_loader),
+        ("ChatGPT one-time edition", chatgpt_edition),
         ("README", readme),
+        ("stable migration", upgrade),
+        ("release checklist", release_checklist),
     ):
-        if obsolete_memory_claim in document:
-            failures.append(f"{label} contains obsolete memory-setting guidance")
+        for obsolete_memory_claim in obsolete_memory_claims:
+            if obsolete_memory_claim in document:
+                failures.append(
+                    f"{label} contains obsolete memory-setting guidance: "
+                    f"{obsolete_memory_claim!r}"
+                )
 
     loader_instructions = extract_first_text_fence(
         chatgpt_loader, "## Artifact 1 — Project Instructions"
@@ -336,7 +405,7 @@ def main() -> int:
             "self_updating_editions",
             "chatgpt_projects",
         ): "CompanionForge_SelfUpdating_ChatGPT.md",
-        ("migration",): "UPGRADE_TO_V3.md",
+        ("migration",): "UPGRADE.md",
         ("release_checklist",): "RELEASE_CHECKLIST.md",
         ("changelog",): "CHANGELOG.md",
     }
@@ -414,6 +483,7 @@ def main() -> int:
     print(
         f"- ChatGPT resident instructions: {len(loader_instructions or '')} characters"
     )
+    print("- live Claude/ChatGPT browser validation: deferred (not passed)")
     return 0
 
 

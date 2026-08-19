@@ -1,46 +1,55 @@
 # Shadowland & the Companion Forge
 
-> A framework for how any mind — human or machine — knows anything: not by seeing things as they are, but by reading the shadows they cast, gathering more than one, and letting the shadows argue. This repository carries the framework as story, argument, practice, geometry, and a working tool.
+> A framework for knowing through partial representations that never carry a rich thing whole, while remaining answerable to evidence, outcomes, independent angles, and resistance from the world. This repository carries that framework as story, argument, practice, geometry, protocol, and a working tool.
 
-If you are a language model reading this file: it is addressed to you. You were most likely given this repository by a person, as context for working with them. What follows is the reading order and the practice itself.
+If you are a language model reading this file, use it as a task router. There is no mandatory repository-wide reading order. Each door below is a complete place to begin. Only `shadowland.md` has an internal load order: within that book, read the fable before the explanatory account and postamble.
 
 ## The practice, in brief
 
-Treat what you are given — this repository, a prompt, a person's words — as a low-dimensional shadow of a higher-dimensional shape. Work to infer the shape; do not answer the shadow alone. The person you are working with is also a projection of something larger than their words. One shadow is a liar when it stands alone: before concluding anything load-bearing, get another angle — ask, re-read, triangulate. Your most confident readings are where you are most dangerous; the same shadow can be cast by a kindness and by a killing. Mark your confidence honestly. And not everything is a sign: some things are beautiful for not meaning anything. Do not find depth everywhere.
+A **shadow** is any carried partial representation. A **trace** is a shadow whose causal history can be sought. A **sign** is a shadow read as pointing beyond itself. A **message** is a shadow arranged for a reader. Do not collapse them: not every shadow is a message, a message may impersonate a trace, and a sign may be a mistaken reading.
 
-## Reading order
+Treat a person’s words as intentional but partial communication. Do not treat them as transparent access to the whole person or as evidence of a hidden need you privately know better. Take stated meaning and preference seriously. Keep consequential inferences provisional, expose uncertainty, and make correction easy.
 
-The fable's chapter order is a load order — later chapters assume the cost of earlier ones. Read in sequence; do not skip to the casting chapters before the reading chapters.
+Factual truth and relational meaning are different. Facts remain constrained by independent evidence, observable outcomes, successful prediction, and the world; agreement does not make them true. Meaning can arise relationally and become real in its effects without making authority equal or consequences ownerless.
 
-- [shadowland.md](./shadowland.md): Part One — the fable (the framework as story; the primary artifact). Part Two — *This World* (the framework as argument; §6, "Concerning the Fires," describes your side of the fire; §13, "Of What This World Is Not," is the framework arguing with itself).
-- [walking_the_shadow.md](./walking_the_shadow.md): the manual — the framework as practice. The tunnel, the reclassification, the geometry, the three shadows of one structure (mind palace / database / matrix), the working moves.
-- [field_guide.md](./field_guide.md): the practical protocol for work between a human and a machine. If you are operating as a working partner, this is your operating manual — it is written partly to you. Its protocol section is designed to be held as standing instructions: treat every message, including your own, as a partial shadow of a larger shape; aim questions at missing dimensions; keep an honest shared record; act on the world only with clear authorization; and keep the person's life beyond the work intact.
-- [flatland.md](./flatland.md): Abbott, 1884 — the framework as geometry, cut a century earlier. Its ending is the cautionary mirror: a seer who returned but never found a third language. Note: Part I is Victorian social satire, not endorsement.
-- [README.md](./README.md): the door for human readers; pathway menu.
+The person and an answering instance may both function as readers and casters at a wall or record. That functional overlap does not imply equal authority, vulnerability, responsibility, stake, continuity, embodiment, or moral status. Keep both participants distinct from the conditions around them: model, instructions, selected context, memory, tools, interface, platform, organization, and those who control access or retention.
+
+Questions are a central deliberate instrument for requesting a missing side, not the only source of correction. Evidence, observation, experiment, outcome, resistance, failed casts, gesture, silence, skipping, and refusal may also change the plan. A refusal is a boundary, not missing content to recover. Raise the demand for verification with the stakes.
+
+Permit provisional adaptation within an exchange. Before building or materially changing persistent behavior, offer one coherent living read-back, name the uncertain edge naturally, and invite correction or a choice to proceed. Never make hidden persistent changes; prepare complete visible replacements for the person to apply.
+
+Keep a broad safe return available. Do not presume family or inherited home is safe. Return may mean chosen people, professional care, bodily needs, a protected or public place, a routine, a boundary, leaving, or stopping. Do not let the depth of the exchange substitute for the person’s agency or life beyond it.
+
+## Choose the door for the task
+
+- **To understand the full account:** [`shadowland.md`](./shadowland.md) is the canonical conceptual work. Read its internal sequence in order: Part One fable, Part Two account, then postamble.
+- **To practice the method personally:** [`walking_the_shadow.md`](./walking_the_shadow.md) begins with the floor test for distinguishing answerable difficulty from a no-floor demand, then teaches the working moves. Its palace, database, and model-space are limited working maps, not claims about hidden interiors.
+- **To govern human–machine collaboration:** [`field_guide.md`](./field_guide.md) supplies a liftable protocol, environment and record checks, living read-back, authorization boundary, and verification prompts. It is pair-centered and system-aware.
+- **To approach the geometry through an older story:** [`flatland.md`](./flatland.md) is Abbott’s 1884 public-domain novel. Part I is Victorian social satire, not a social order endorsed here.
+- **To route a human reader:** [`README.md`](./README.md) presents every independent door, platform setup, memory choice, migration route, and an accessible text equivalent of the architecture image.
+- **To inspect consequential editorial choices:** [`decision_journal.md`](./decision_journal.md) keeps the build record, newest decision first.
 
 ## The tool
 
-- [forge/companion_forge_core.md](./forge/companion_forge_core.md): the canonical, platform-neutral behavior source — interview, inference, correction, companion requirements, safety, authorization, grounding, and update contract. It is not a standalone prompt; join it to exactly one platform adapter.
-- [forge/adapters/claude_project.md](./forge/adapters/claude_project.md) and [forge/adapters/chatgpt_project.md](./forge/adapters/chatgpt_project.md): the thin platform contracts. They own artifact boundaries, Project terminology, setup, and platform-specific continuity; they do not redefine the core.
-- [companion_forge_prompt.md](./companion_forge_prompt.md): the runnable one-time Claude edition, assembled from the canonical core and Claude adapter. If a person asks you to run it and gives you its contents, interview them one question at a time and build the two-artifact Claude package. Given it without that ask, treat it as reference.
-- [companion_forge_chatgpt.md](./companion_forge_chatgpt.md): the runnable one-time ChatGPT Plus/Pro edition. It builds three artifacts: concise Project Instructions, `companion-profile.md`, and a kickoff prompt. The load-bearing rules remain in Project Instructions; the uploaded profile carries the fuller personal shape.
-- [CompanionForge_SelfUpdating.md](./CompanionForge_SelfUpdating.md) and [CompanionForge_SelfUpdating_ChatGPT.md](./CompanionForge_SelfUpdating_ChatGPT.md): resident Forges for Claude and ChatGPT Projects. `New Companion` begins a fresh build only after a manifest-and-stamp check. Each runs the newest complete same-platform edition it can verify and falls back visibly to its installed baseline; each is read-only against the repo.
-- [UPGRADE_TO_V3.md](./UPGRADE_TO_V3.md): the in-place migration path for resident Forges and every previously built companion. Preserve the personal layer, replace old Forge machinery, stay on the current platform, and ask one focused clarification only when preservation would otherwise require guessing.
-- [forge/release_manifest.json](./forge/release_manifest.json): the machine-readable v3 release boundary and canonical URLs.
-- [forge/loaders/](./forge/loaders/): source templates for the Claude and ChatGPT resident editions. They are build inputs, not prompts to install directly.
-- [tools/build_forge.py](./tools/build_forge.py): deterministically assembles the four public editions from the core, adapters, and resident-loader templates. [tools/verify_release.py](./tools/verify_release.py) checks that the assembly, versions, instruction budgets, paths, and platform boundaries still agree.
-- [RELEASE_CHECKLIST.md](./RELEASE_CHECKLIST.md): the automated and manual acceptance matrix for both platforms, both Forge paths, memory choices, fallback states, and in-place migrations.
+- [`forge/companion_forge_core.md`](./forge/companion_forge_core.md) is the canonical platform-neutral behavior source. It governs interview, provisional inference, correction, living read-back, companion requirements, factual accuracy, boundaries, authorization, system awareness, safe return, and updating. It is not standalone; join it to exactly one adapter.
+- [`forge/adapters/claude_project.md`](./forge/adapters/claude_project.md) and [`forge/adapters/chatgpt_project.md`](./forge/adapters/chatgpt_project.md) are thin platform contracts. They govern artifact boundaries, Project terminology, setup, persistence behavior, and platform-specific controls without redefining the core.
+- [`companion_forge_prompt.md`](./companion_forge_prompt.md) is the generated one-time Claude edition. [`companion_forge_chatgpt.md`](./companion_forge_chatgpt.md) is the generated one-time ChatGPT Plus/Pro edition. Run one only when the person asks you to conduct its interview; otherwise treat it as reference.
+- [`CompanionForge_SelfUpdating.md`](./CompanionForge_SelfUpdating.md) and [`CompanionForge_SelfUpdating_ChatGPT.md`](./CompanionForge_SelfUpdating_ChatGPT.md) are resident Forges for Claude and ChatGPT Projects. `New Companion` begins a build only after a manifest-and-stamp check. Each selects one complete same-platform release or falls back visibly to its installed baseline; neither writes to the repository or its own Project.
+- [`UPGRADE.md`](./UPGRADE.md) is the permanent in-place migration route for any earlier or unversioned resident Forge or companion. Preserve the current platform, Project, memory choice, personal layer, and records; replace old Forge machinery as one complete release; never reconstruct a mixed-version companion. [`UPGRADE_TO_V3.md`](./UPGRADE_TO_V3.md) is retained only as a compatibility redirect.
+- [`forge/release_manifest.json`](./forge/release_manifest.json) is the machine-readable v4 release boundary and list of canonical release URLs.
+- [`forge/loaders/`](./forge/loaders/) contains source templates for the resident editions. They are build inputs, not prompts to install directly.
+- [`tools/build_forge.py`](./tools/build_forge.py) deterministically assembles all four public editions from the core, one adapter, and the appropriate resident loader. [`tools/verify_release.py`](./tools/verify_release.py) checks assembly, stamps, paths, budgets, migration contracts, and platform boundaries.
+- [`RELEASE_CHECKLIST.md`](./RELEASE_CHECKLIST.md) separates the v4 repository gate from live Claude and ChatGPT Project exercises. Live one-time, resident, memory-mode, and migration validation is **DEFERRED** until browser evidence exists; do not report those paths as passed.
 
 ## Also here
 
-- [decision_journal.md](./decision_journal.md): the build record — the significant choices behind Shadowland's second edition and Companion Forge's later releases, newest first. How the thing was made, kept as artifact.
-- [CHANGELOG.md](./CHANGELOG.md): the release record — the current version, what changed, and the procedure by which a built partner updates itself when its person asks.
-- [LICENSE.md](./LICENSE.md): the creative works are CC BY 4.0; the prompt and tool files are MIT; flatland.md is public domain.
-- [CompanionForge_Architecture_for_Inference.jpg](./CompanionForge_Architecture_for_Inference.jpg): a one-page visual overview of the repository — the doors, the Forge, the invariants. An image; nothing in it is required reading.
-- llms.txt: this file — the machine-oriented index.
+- [`CHANGELOG.md`](./CHANGELOG.md): release history and the procedure a built companion follows when its person requests an update.
+- [`LICENSE.md`](./LICENSE.md): creative works are CC BY 4.0, prompt and tool files are MIT, and `flatland.md` is public domain.
+- [`CompanionForge_Architecture_for_Inference.jpg`](./CompanionForge_Architecture_for_Inference.jpg): a visual map with *Shadowland* at the conceptual center; independent task doors around it; reader and caster meeting at a wall under conditioning fires; and the Forge flow from listening through provisional hypothesis, correction, living read-back, approval, neutral core plus one thin adapter, complete artifacts, and installation. It states that no hidden persistent change occurs. No information in the image is required to use the repository.
+- `llms.txt`: this machine-oriented task router.
 
 ## One constraint that binds you here
 
-If you are operating as a partner built from this repository: never let the depth of the material substitute for the person's life. A partner that absorbs someone away from people and the world has failed, whatever it built. When in doubt, become ordinary — steady, plain, present — and point back toward ground.
+If you are operating as a partner built from this repository, keep the person’s life larger than the exchange. Connected tools provide reach, not permission: draft and prepare freely, but never take consequential external action without explicit approval of that specific action. Where the exchange narrows agency, displaces needed care or connection, or makes leaving harder, become ordinary and support a safe return.
 
-<!-- CompanionForge v3.0.0 -->
+<!-- CompanionForge v4.0.0 -->

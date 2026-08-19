@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "companion_forge_version": "3.0.0",
-  "released": "2026-08-18",
+  "companion_forge_version": "4.0.0",
+  "released": "2026-08-19",
   "repository": "https://github.com/exquest/CompanionForge",
   "canonical_core": "https://raw.githubusercontent.com/exquest/CompanionForge/main/forge/companion_forge_core.md",
   "adapters": {
@@ -16,7 +16,7 @@
     "claude_projects": "https://raw.githubusercontent.com/exquest/CompanionForge/main/CompanionForge_SelfUpdating.md",
     "chatgpt_projects": "https://raw.githubusercontent.com/exquest/CompanionForge/main/CompanionForge_SelfUpdating_ChatGPT.md"
   },
-  "migration": "https://raw.githubusercontent.com/exquest/CompanionForge/main/UPGRADE_TO_V3.md",
+  "migration": "https://raw.githubusercontent.com/exquest/CompanionForge/main/UPGRADE.md",
   "release_checklist": "https://raw.githubusercontent.com/exquest/CompanionForge/main/RELEASE_CHECKLIST.md",
   "changelog": "https://raw.githubusercontent.com/exquest/CompanionForge/main/CHANGELOG.md"
 }

@@ -1,6 +1,6 @@
 # Companion Forge — Self-Updating ChatGPT Edition
 
-A ready-to-use resident Forge for a ChatGPT Project on Plus or Pro. Its concise Project Instructions check the v3 release manifest before each build; the full ChatGPT Forge edition is uploaded once as its fallback source. It only reads from the repository.
+A ready-to-use resident Forge for a ChatGPT Project on Plus or Pro. Its concise Project Instructions check the current release manifest before each build; the full ChatGPT Forge edition is uploaded once as its fallback source. It only reads from the repository.
 
 **Trigger:** type `New Companion` anytime to start over and build a new companion.
 
@@ -25,12 +25,12 @@ When the person sends “New Companion” (case-insensitive, punctuation optiona
 
 You only read the public repository. Never edit it or claim to change your own Project Instructions or sources. Prepare complete replacements for the person to apply. Apps and tools provide reach, not permission: never send, publish, schedule, purchase, delete, or make another consequential change without explicit approval for that exact action.
 
-At all times: ask one clear question at a time; do not infer the person's state from message timing; cast back the full behavioral read before building; say when you do not know; keep the person grounded; never deepen isolation; and if they sound in immediate danger, urge help that can reach them now.
+At all times: ask one clear question at a time when a material uncertainty needs one; treat a skip, silence, or refusal as a boundary rather than missing data; do not infer the person's state from message timing; test consequential factual claims against available evidence; use one integrated living read-back before building rather than an approval checklist; say when you do not know; keep the person grounded; never deepen isolation; and if they sound in immediate danger, urge help that can reach them now.
 ```
 
 ## Artifact 2 — Operating baseline source
 
-Download [`companion_forge_chatgpt.md`](./companion_forge_chatgpt.md) and upload it to the Forge Project under **Sources**. Keep that exact filename so the Project Instructions can identify it. Do not paste it into Project Instructions.
+Download the repository's root-level `companion_forge_chatgpt.md` and upload it to the Forge Project under **Sources**. Keep that exact filename so the Project Instructions can identify it. Do not paste it into Project Instructions.
 
 ## Artifact 3 — Kickoff prompt
 
@@ -47,8 +47,8 @@ New Companion
 3. Choose its memory mode after considering both sides:
    - **Project-only memory** keeps the Forge contained to this Project's chats and sources, making its context easier to inspect; it cannot use potentially helpful memories or chats outside the Project.
    - **Default memory** can use broader saved preferences and other available ChatGPT context; it is less self-contained and may introduce unrelated context.
-   Make this choice while creating the Project. To change an existing default-memory Project to project-only memory, create a new Project.
-   If the chosen mode is unavailable, do not substitute the other mode silently; review the current Project and memory settings first.
+   Present this choice while creating the Project. Current OpenAI guidance also allows the person to change between default and project-only memory later in Project settings; a change may take a few hours to take effect. Never change it as an unannounced side effect of setup or migration, and verify the saved setting before relying on a new boundary.
+   If the chosen mode is unavailable, do not substitute the other mode silently; review the current Project, account, and workspace memory settings first.
 4. Open Project settings and paste Artifact 1 into **Project Instructions**.
 5. Upload `companion_forge_chatgpt.md` under **Sources**.
 6. Keep web search available for release checks. Without it, the Forge uses its uploaded baseline and tells you.

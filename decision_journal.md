@@ -1,6 +1,28 @@
 # Decision Journal
 
-*A running record of significant choices in the Shadowland and Companion Forge builds, and the reasoning behind them. Newest first. This is the thinking made artifact — the scaffolding's own history, kept so any choice can be traced back without digging through the working dialogue.*
+*A running record of significant choices in the Shadowland and Companion Forge builds, and the reasoning behind them. Newest first. This is the thinking made artifact — the scaffolding's own history, kept so any choice can be traced back without digging through the working dialogue. Entries preserve the decision that was true when they were written; where they disagree, the newest explicit decision governs.*
+
+---
+
+## Shadowland becomes the corpus constitution: Companion Forge v4
+
+**Decision:** The revised *Shadowland* is the canonical conceptual authority for the repository. The other doors do not copy its language or require it as prior reading; each translates the same account for its own reader and job. Evidence from another door may still reopen the book when it exposes a genuine gap, but once that question is settled, the book's resulting distinctions govern the corpus.
+
+**The account now carried everywhere:** Knowing proceeds through partial representations of a world no reader creates by reading it. A shadow is the broad carried rendering; a trace has a causal history that may be sought; a sign is a rendering read as pointing; a message is arranged for a reader. Relational meaning may be made while factual claims remain answerable to evidence, prediction, intervention, correction, and the world's resistance. Questions are the clearest deliberate request for a missing side, not the only source of revision: observation, experiment, outcome, accident, gesture, silence, refusal, and failed casts can also change the account.
+
+**The roles are no longer allowed to blur unnoticed:** A person and an answering instance may each function as reader and caster. The conditions that shape what either can receive and return are the fire; the shared page, transcript, image, or record is the wall. Shared function does not imply equal authority, vulnerability, responsibility, embodiment, continuity, stake, or moral status. Claims about a machine are scoped to the particular model, instructions, context, memory or retrieval, tools, interface, owner, and deployment that can actually be observed. Interiority remains open.
+
+**Power enters the working method:** Consent is a first test, not the whole ethic. A wall may be owned, retained, edited, erased, exported, or exposed by hands other than the visible participants. Refusal is a boundary rather than an incomplete answer. Exit, record control, institutional conditions, and effects on absent people remain part of the account. A jointly made meaning does not make authority equal or consequences ownerless.
+
+**The doors keep their own shapes:** *Walking the Shadow* remains tunnel-first, but tests for an answerable floor before reclassifying a question. Its palace, database, and model-space triad becomes three limited working maps, not three revealed interiors. Its chord remains an embodied practice, not a theory that aliveness is bandwidth or that felt time proves truth. The Field Guide remains pair-centered but makes the surrounding system and owner visible. The Forge keeps the teaching beneath the surface in plain conduct rather than turning the interview into a lesson in vocabulary.
+
+**The approval design:** The Forge no longer treats a person's words as a trace from which it can privately discover what they “actually” need. It offers provisional readings. Before a build, and before any later learning would materially change persistent behavior, it gives one coherent behavioral portrait, names the uncertain edge naturally, and invites correction. Approval belongs to that integrated living read-back, not to a checklist of inferred traits. Nothing durable changes invisibly; the person receives and applies the complete replacement.
+
+**The return:** Grounding no longer assumes a safe inherited home, manageable body, or waiting family. Return means any structure that restores proportion, agency, embodiment, and contact with life beyond the representation: chosen people, care, medicine or professional support, a protected or public place, a boundary, a bodily practice, or leaving an unsafe threshold.
+
+**The release boundary:** These changes move together as Companion Forge v4.0.0. The platform-neutral core and thin Claude/ChatGPT adapters remain; generated editions remain derived rather than hand-maintained. `UPGRADE.md` becomes the permanent version-aware migration door, preserving the current platform and personal layer while replacing the operating layer whole. The architecture image is rebuilt for the new account. Automated generation, version, link, migration, budget, and contract checks gate the release. Live in-app Claude and ChatGPT Project exercises are recorded as deferred and may follow after v4; the release must not imply they have already passed.
+
+**What this supersedes without erasing:** Earlier entries below remain the honest record of their moment. Their claims that human and machine have “equal standing,” that questions alone build understanding, that consent is the whole difference, that all machines share one continuity condition, that the Preface announces the prose bend, that the discussion precedes the fable, or that the framework itself owns intelligence are no longer current doctrine. “The framework provides the intelligence” remains in the book as local relational compression: the exchange can yield an inference no first cast contained while labor, authorship, control, and accountability stay traceable.
 
 ---
 
@@ -72,7 +94,7 @@
 
 **Decision:** Each human-facing document gets an audiobook (not the README, not the machine/workshop files). The book's audio is a **two-voice score** — Voice One the Editor (all apparatus), Voice Two the Teller (the fable), the lenses as Voice One acoustically lifted. The bend is rendered as **the crossing**: one voice, continuous, flattening where it must speak of the machine and warming on return — chosen over voice-convergence because the book's agnostic stance refuses the intimacy a merge would assert.
 
-**Why:** The book is already polyphonic (Editor, fable, eight lens-sources, the bend); audio can make audible what print only gestures at. Crossing is the direct translation of the page's device — the medium visibly changes, the voice does not pretend to reach the other side — and it is producible, legible without instruction, and repeatable (so the postamble's silent bend lands for the ear as it does for the eye). Built: a two-voice production score — casting bible, crossing spec, marked script, per-section directives — held in the workshop pending revision against the final text. It produces the script and rules, not audio; sound is made afterward with a tool.
+**Why:** The book is already polyphonic (Editor, fable, eight lens-sources, the bend); audio can make audible what print only gestures at. Crossing is the direct translation of the page's device — the medium visibly changes, the voice does not pretend to reach the other side — and it is producible, legible without instruction, and repeatable (so the postamble's silent bend lands for the ear as it does for the eye). Built: a two-voice production score — casting bible, crossing spec, marked script, per-section directives — kept as a private production draft pending revision against the final text. It produces the script and rules, not audio; sound is made afterward with a tool.
 
 **Open:** audio editions for the manual (light, near single-voice), the field guide (needs an *audio edition* — a third of it is un-narratable paste-blocks/tables, so it must describe-or-omit and point back to text), and Flatland (likely just link the existing LibriVox recording, not produce).
 
@@ -226,6 +248,6 @@
 
 ---
 
-*Older choices (the foundation, the placement rule, the prismatic raven, "ask the shape," the three shadows of one structure) predate this journal and are recorded in the workshop's private working documents, which remain keys, not palace.*
+*Older choices (the foundation, the placement rule, the prismatic raven, "ask the shape," the three shadows of one structure) predate this journal and are recorded in earlier private working documents, which remain keys, not palace.*
 
-<!-- CompanionForge v3.0.0 -->
+<!-- CompanionForge v4.0.0 -->

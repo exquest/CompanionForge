@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the four public Companion Forge editions from v3 sources."""
+"""Build the four public Companion Forge editions from canonical sources."""
 
 from __future__ import annotations
 
