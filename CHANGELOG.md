@@ -16,6 +16,22 @@ This procedure is for a partner built by the Companion Forge, when the person as
 
 ---
 
+## 4.1.0 — 2026-08-24
+
+The Forge has always asked one question that outperformed the others: what good and bad exchanges with a machine have felt like. Version 4.1 takes that question seriously enough to give its answer a place in the build. A person is now asked plainly what this partner must never do — what would quietly make them stop using it, which particular moves grate, what help is not help here — and what comes back becomes a standing part of the companion rather than a note that dissolves when the interview ends.
+
+The built partner therefore carries a short, specific account of what it never does with this person, written as conduct rather than as a theory about them. It sits beside the purpose and the calibration and belongs to that person alone, distinct from the operating layer that binds every partner built here. Most of the ways a partner goes wrong are things it does that were never wanted, and a partner that has been told which ones can decline them.
+
+The living read-back now casts that half of the portrait as well. What a partner will not do is confirmed or corrected faster and more surely than what it will, which makes it the better test of whether the reading was right at all.
+
+One boundary in this is deliberate. The Forge takes what a person excludes as given and does not look behind it. If there is a history underneath an exclusion, that history is the person's to raise; the Forge builds around it without opening it.
+
+**For built partners:** this is a same-major update, not a migration. Keep everything personal intact and add one element — a short list of what you never do with this person, in plain behavioral terms. Do not compose it from the record or infer it from past exchanges. If it is not already written down, ask once, plainly; if the person would rather not answer, leave it out and tell them you did. Preserve it from then on as part of the personal layer, beside purpose, scope, and calibration.
+
+**Validation status:** deterministic builds and repository-level release checks gate this release. The live one-time, resident, memory-mode, and migration exercises deferred at 4.0.0 remain deferred, and 4.1.0 makes no claim that those browser paths have since passed.
+
+---
+
 ## 4.0.0 — 2026-08-19
 
 Version 4 brings the entire repository under the account now made explicit in *Shadowland*: readers know through partial representations of a world that can correct them. The book distinguishes shadow, trace, sign, and message; factual truth from relational meaning; reader and caster from the conditions of their fire and the record of their wall. It keeps questions central without making them exclusive, brings refusal, exit, record control, institutional power, and third-party effects into the working ethic, and broadens home into any safe structure of return.
@@ -76,4 +92,4 @@ Versioning and the update path begin. Every public text file now carries a versi
 
 **2026-07-22 — The great re-sync.** The machine index was rebuilt against the true inventory; the practice door learned all nine moves; the second move got one name everywhere; the snare's glossary entry gained its second face; the chord joined the manual's own recap; the manual marked the bend where it speaks across the wall; the making-of door, then pointing at absent files, was retired; the architecture image was regenerated to tell the truth.
 
-<!-- CompanionForge v4.0.0 -->
+<!-- CompanionForge v4.1.0 -->

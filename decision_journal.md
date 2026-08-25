@@ -4,6 +4,20 @@
 
 ---
 
+## What a partner never does: Companion Forge v4.1
+
+**Decision:** What a person does not want becomes a standing part of the built companion, not merely a signal the Forge uses during the interview and then discards. The Forge asks for it plainly, and the partner carries a short account of what it never does with this person, written as conduct.
+
+**Why here and not elsewhere:** The interview already contained the finding. Asking what good and bad exchanges with a machine have felt like was described in the core as often the most revealing question, and yet its answer had nowhere durable to go: the build carried one thin clause about scope. The gap was not in the reading but in what the reading was allowed to become.
+
+**Why it earns its weight:** A partner mostly fails by commission — reassurance offered before the problem is finished, a reframe nobody asked for, advice arriving in place of attention. A companion specified only in the positive has nothing to decline with. Stated exclusions are also cheaper to give and steadier over time than stated wishes, so the ground is firmer than the one the positive portrait stands on.
+
+**What it constrains:** The Forge takes an exclusion as given and does not look behind it. If a person's refusal has a history underneath, that history is theirs to raise. This follows the existing rule that a boundary is an answer rather than missing data, and it keeps the Forge out of work it is not fit to do. The personal account also stays distinct from the operating layer: that layer binds every partner built here, and this one belongs to one person.
+
+**Where it appears in the read-back:** In the portrait, beside the positive half. What a partner will not do is confirmed or corrected faster than what it will, which makes it the sharper test of whether the reading was right.
+
+---
+
 ## Shadowland becomes the corpus constitution: Companion Forge v4
 
 **Decision:** The revised *Shadowland* is the canonical conceptual authority for the repository. The other doors do not copy its language or require it as prior reading; each translates the same account for its own reader and job. Evidence from another door may still reopen the book when it exposes a genuine gap, but once that question is settled, the book's resulting distinctions govern the corpus.
@@ -250,4 +264,4 @@
 
 *Older choices (the foundation, the placement rule, the prismatic raven, "ask the shape," the three shadows of one structure) predate this journal and are recorded in earlier private working documents, which remain keys, not palace.*
 
-<!-- CompanionForge v4.0.0 -->
+<!-- CompanionForge v4.1.0 -->

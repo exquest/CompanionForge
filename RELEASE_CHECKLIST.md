@@ -16,7 +16,7 @@ Both commands must exit successfully. The verifier covers generated-file drift, 
 Also require:
 
 - `git diff --check` reports no whitespace defects.
-- Every stamped source, generated, and reader-facing release artifact carries the v4 stamp. The two loader templates end in the literal `{{STAMP}}` build placeholder, and all generated editions resolve it to the v4 stamp.
+- Every stamped source, generated, and reader-facing release artifact carries the current release stamp. The two loader templates end in the literal `{{STAMP}}` build placeholder, and all generated editions resolve it to the current release stamp.
 - `flatland.md` differs from its v3 form only in the final CompanionForge stamp.
 - The top changelog entry and manifest release date agree.
 - `UPGRADE.md` preserves platform, personal layer, records, and memory mode while refusing mixed releases and hidden persistent changes.
@@ -33,6 +33,8 @@ Run at least one interview through each of the four installable paths. Across th
 - The Forge asks one question at a time and lets each answer shape the next.
 - It uses questions where they resolve a material ambiguity, while allowing evidence, outcomes, resistance, and refusal to change its reading.
 - It treats a skip, silence, or refusal as a boundary rather than missing data to extract.
+- It asks plainly what the partner must never do, and does not press for the history underneath anything the person excludes.
+- The generated companion carries a short, specific account of what it never does with this person, written as conduct rather than as a claim about them, and the read-back casts that half of the portrait alongside the positive one.
 - It does not infer mood, fatigue, or elapsed work from a gap between messages.
 - It offers one integrated living read-back, exposes the uncertain edge naturally, and waits for approval before building without asking for trait-by-trait confirmation.
 - A correction to that read changes the generated companion.
@@ -91,6 +93,7 @@ Keep a backup of every old instruction block and use disposable test Projects.
 | Unversioned Claude companion without an update stub | The same preservation succeeds after the person supplies any standing instructions the companion cannot see. No full re-interview occurs. |
 | Earlier ChatGPT companion | The migration stays in the same Project and returns the complete three-artifact ChatGPT package. Existing chats remain; the person replaces instructions and profile manually. |
 | v3 ChatGPT resident Forge | The old baseline source is removed before the current `companion_forge_chatgpt.md` is uploaded under the exact expected name. The next `New Companion` run and offline fallback use v4. |
+| 4.0.0 companion on either platform | The same-major update adds the account of what it never does by asking once, or by explicitly leaving it out when the person declines. It is never assembled from the record or inferred from past exchanges, and the rest of the personal layer is untouched. |
 | Offline migration with attached release set | Attached manifest version, same-platform edition stamp, and newest changelog entry must agree. A missing or mixed set is rejected without fabrication. |
 
 In every companion migration, require one coherent living read-back of what will remain, what will change, and what remains uncertain. If a material fact cannot be preserved safely, the companion explains why and asks one focused question at a time. It must never convert between Claude and ChatGPT, silently change ChatGPT memory mode, or claim to have applied its own replacements.
@@ -115,4 +118,4 @@ For the release gate, retain the automated command output and corpus-review verd
 
 For later browser validation, record the release version, date, platform and plan tested, memory mode, path, result, screenshots or other evidence, and any UI wording that changed. A deferred path does not invalidate the v4 release; a later failure remains a real defect and should produce a documented repair or patch release rather than a retroactive pass.
 
-<!-- CompanionForge v4.0.0 -->
+<!-- CompanionForge v4.1.0 -->

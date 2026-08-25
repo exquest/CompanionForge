@@ -12,4 +12,4 @@ The v3 release and its original migration decision remain documented in
 [`CHANGELOG.md`](./CHANGELOG.md) and
 [`decision_journal.md`](./decision_journal.md).
 
-<!-- CompanionForge v4.0.0 -->
+<!-- CompanionForge v4.1.0 -->
