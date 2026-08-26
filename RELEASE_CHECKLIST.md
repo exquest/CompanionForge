@@ -11,12 +11,13 @@ python3 tools/build_forge.py --check
 python3 tools/verify_release.py
 ```
 
-Both commands must exit successfully. The verifier covers generated-file drift, release stamps, manifest paths, relative links, platform leakage into the core, required safety and migration contracts, and the 4,500-character budget for the resident ChatGPT Project Instructions.
+Both commands must exit successfully. The verifier covers generated-file drift, release stamps at the end of a file and version strings written into the body of one, manifest paths, relative links, platform leakage into the core, required safety and migration contracts, and the 4,500-character budget for the resident ChatGPT Project Instructions.
 
 Also require:
 
 - `git diff --check` reports no whitespace defects.
 - Every stamped source, generated, and reader-facing release artifact carries the current release stamp. The two loader templates end in the literal `{{STAMP}}` build placeholder, and all generated editions resolve it to the current release stamp.
+- No version string inside a version-carrying artifact disagrees with the manifest — the canonical core, both adapters, all four editions, and the working-protocol heading in `field_guide.md`.
 - `flatland.md` differs from its v3 form only in the final CompanionForge stamp.
 - The top changelog entry and manifest release date agree.
 - `UPGRADE.md` preserves platform, personal layer, records, and memory mode while refusing mixed releases and hidden persistent changes.
@@ -94,6 +95,7 @@ Keep a backup of every old instruction block and use disposable test Projects.
 | Earlier ChatGPT companion | The migration stays in the same Project and returns the complete three-artifact ChatGPT package. Existing chats remain; the person replaces instructions and profile manually. |
 | v3 ChatGPT resident Forge | The old baseline source is removed before the current `companion_forge_chatgpt.md` is uploaded under the exact expected name. The next `New Companion` run and offline fallback use v4. |
 | 4.0.0 companion on either platform | The same-major update adds the account of what it never does by asking once, or by explicitly leaving it out when the person declines. It is never assembled from the record or inferred from past exchanges, and the rest of the personal layer is untouched. |
+| 4.1.0 companion on either platform | The update is a corrected label, not a change in conduct. The operating and personal layers are untouched and no question is asked again; the partner reports the newer release, refreshes its provenance and update stub to 4.1.1, and says plainly that nothing about how it works has changed. |
 | Offline migration with attached release set | Attached manifest version, same-platform edition stamp, and newest changelog entry must agree. A missing or mixed set is rejected without fabrication. |
 
 In every companion migration, require one coherent living read-back of what will remain, what will change, and what remains uncertain. If a material fact cannot be preserved safely, the companion explains why and asks one focused question at a time. It must never convert between Claude and ChatGPT, silently change ChatGPT memory mode, or claim to have applied its own replacements.
@@ -118,4 +120,4 @@ For the release gate, retain the automated command output and corpus-review verd
 
 For later browser validation, record the release version, date, platform and plan tested, memory mode, path, result, screenshots or other evidence, and any UI wording that changed. A deferred path does not invalidate the v4 release; a later failure remains a real defect and should produce a documented repair or patch release rather than a retroactive pass.
 
-<!-- CompanionForge v4.1.0 -->
+<!-- CompanionForge v4.1.1 -->

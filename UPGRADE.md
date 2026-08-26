@@ -136,4 +136,4 @@ version and current-platform adapter actually used.
 - The person received complete replacement artifacts and applied them; the
   companion did not claim a hidden or automatic persistent change.
 
-<!-- CompanionForge v4.1.0 -->
+<!-- CompanionForge v4.1.1 -->

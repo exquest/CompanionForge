@@ -20,6 +20,25 @@ MANIFEST_PATH = ROOT / "forge/release_manifest.json"
 RAW_PREFIX = "/exquest/CompanionForge/main/"
 STAMP_RE = re.compile(r"<!-- CompanionForge v([^>]+) -->\s*$")
 MARKDOWN_LINK_RE = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
+BODY_VERSION_RE = re.compile(r"\bv(\d+\.\d+\.\d+)\b")
+PROTOCOL_HEADING_RE = re.compile(
+    r"^SHADOWLAND WORKING PROTOCOL v(\S+)$", re.MULTILINE
+)
+# A stamp at the end of a file is not the only place a version lives. These
+# artifacts carry the release forward to a reader or a machine, so every version
+# string inside them must be the release's own. Historical documents — the
+# changelog, the decision journal, the migration matrix — name older versions on
+# purpose and are deliberately absent from this tuple.
+VERSION_CARRYING_FILES = (
+    "forge/companion_forge_core.md",
+    "forge/adapters/claude_project.md",
+    "forge/adapters/chatgpt_project.md",
+    "companion_forge_claude.md",
+    "companion_forge_chatgpt.md",
+    "CompanionForge_SelfUpdating_Claude.md",
+    "CompanionForge_SelfUpdating_ChatGPT.md",
+    "field_guide.md",
+)
 FLATLAND_BODY_SHA256 = (
     "e33e940391dcd6b7f90034547f4b6d85e64f819f707e5fb3b89ae4dc77594ae3"
 )
@@ -178,6 +197,24 @@ def main() -> int:
     ):
         failures.append(
             "flatland.md historical body changed; only its trailing release stamp may change"
+        )
+
+    for relative_path in VERSION_CARRYING_FILES:
+        document = (ROOT / relative_path).read_text(encoding="utf-8")
+        for found in sorted(set(BODY_VERSION_RE.findall(document))):
+            if found != version:
+                failures.append(f"in-body version mismatch in {relative_path}: v{found}")
+
+    field_guide = (ROOT / "field_guide.md").read_text(encoding="utf-8")
+    protocol_heading = PROTOCOL_HEADING_RE.search(field_guide)
+    if protocol_heading is None:
+        failures.append(
+            "field_guide.md is missing the versioned working-protocol heading"
+        )
+    elif protocol_heading.group(1) != version:
+        failures.append(
+            "working-protocol heading is behind the release in field_guide.md: "
+            f"v{protocol_heading.group(1)}"
         )
 
     core = (ROOT / "forge/companion_forge_core.md").read_text(encoding="utf-8")

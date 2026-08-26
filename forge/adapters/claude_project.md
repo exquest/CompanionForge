@@ -38,4 +38,4 @@ Before the person adds sensitive material or enables consequential tools, direct
 
 When this adapter is joined to the core as a one-time Forge edition, begin now: greet the person briefly and offer the short or longer interview.
 
-<!-- CompanionForge v4.1.0 -->
+<!-- CompanionForge v4.1.1 -->

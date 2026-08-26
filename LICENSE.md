@@ -65,4 +65,4 @@ SOFTWARE.
 
 `flatland.md` is Edwin A. Abbott's *Flatland: A Romance of Many Dimensions* (1884), which is in the public domain. Transcription sourced from Project Gutenberg (eBook #201). No rights are claimed over it.
 
-<!-- CompanionForge v4.1.0 -->
+<!-- CompanionForge v4.1.1 -->

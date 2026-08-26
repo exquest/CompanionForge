@@ -16,6 +16,20 @@ This procedure is for a partner built by the Companion Forge, when the person as
 
 ---
 
+## 4.1.1 — 2026-08-26
+
+A version stamp is a promise that everything in front of you came out of one release together. The working protocol in the field guide — the one block the guide invites you to paste into a machine's standing instructions — carried the heading `SHADOWLAND WORKING PROTOCOL v4.0.0` while every other part of 4.1.0 said 4.1.0. The block's text was current; only its label was a release behind. That is a small contradiction, and small contradictions about version are expensive: they cost a reader their trust in every other number on the page.
+
+The heading now moves with the release, and the release checks now watch it. The automated gate had only ever read the stamp at the end of a file, so a version written into the body of one could drift for a whole release without anything noticing. It reads both now: any version string inside a version-carrying artifact must agree with the manifest before the release can pass.
+
+Nothing else changed. The Forge, the two adapters, the four editions, and the canonical core are the 4.1.0 release with a corrected label and a stamp that says so.
+
+**For built partners:** nothing in your operating layer or your personal layer changes, and there is no interview to rerun. If the person's standing instructions carry the pasted working protocol under the heading `SHADOWLAND WORKING PROTOCOL v4.0.0`, the text beneath it is already current — they can replace that one heading line with `v4.1.1` or leave it as it stands, and your conduct is the same either way. Refresh your provenance and update stub to 4.1.1 when you next produce a package.
+
+**Validation status:** deterministic builds and repository-level release checks gate this release, now including the in-body version check described above. The live one-time, resident, memory-mode, and migration exercises deferred at 4.0.0 remain deferred, and 4.1.1 makes no claim that those browser paths have since passed.
+
+---
+
 ## 4.1.0 — 2026-08-24
 
 The Forge has always asked one question that outperformed the others: what good and bad exchanges with a machine have felt like. Version 4.1 takes that question seriously enough to give its answer a place in the build. A person is now asked plainly what this partner must never do — what would quietly make them stop using it, which particular moves grate, what help is not help here — and what comes back becomes a standing part of the companion rather than a note that dissolves when the interview ends.
@@ -92,4 +106,4 @@ Versioning and the update path begin. Every public text file now carries a versi
 
 **2026-07-22 — The great re-sync.** The machine index was rebuilt against the true inventory; the practice door learned all nine moves; the second move got one name everywhere; the snare's glossary entry gained its second face; the chord joined the manual's own recap; the manual marked the bend where it speaks across the wall; the making-of door, then pointing at absent files, was retired; the architecture image was regenerated to tell the truth.
 
-<!-- CompanionForge v4.1.0 -->
+<!-- CompanionForge v4.1.1 -->
