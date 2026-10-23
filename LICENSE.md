@@ -11,6 +11,7 @@ The following are creative works — written and visual — licensed under [CC B
 - `shadowland.md` — *Shadowland: A Romance of Inference* (the unified book: dedication, preface, Part One — the fable, Part Two — "This World", postamble)
 - `walking_the_shadow.md` — *Walking the Shadow* (the manual)
 - `field_guide.md` — *The Shadowland Field Guide* (as an additional permission beyond CC BY, its protocol blocks and templates — the parts built to be lifted into standing instructions — may be used without attribution; credit is appreciated, never required, for those blocks)
+- `care.md` — *Care and the Conditions of Participation* (the care guide)
 - `decision_journal.md` — the build record: significant choices in Shadowland's second edition and Companion Forge's later releases
 - `README.md` — the door: the pathway menu for human readers
 - `CompanionForge_Architecture_for_Inference.jpg` — the one-page visual overview of the repository
@@ -65,4 +66,4 @@ SOFTWARE.
 
 `flatland.md` is Edwin A. Abbott's *Flatland: A Romance of Many Dimensions* (1884), which is in the public domain. Transcription sourced from Project Gutenberg (eBook #201). No rights are claimed over it.
 
-<!-- CompanionForge v4.1.1 -->
+<!-- CompanionForge v4.2.0 -->

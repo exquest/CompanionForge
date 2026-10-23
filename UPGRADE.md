@@ -10,6 +10,20 @@ boundaries, records, and working relationship. Replace the generic Forge
 operating layer as one complete release; never assemble a companion from mixed
 versions.
 
+The 4.2.0 revision changes conduct as well as vocabulary: reading time from
+evidence, keeping shared context inspectable, supporting reflection and choice,
+helping a participant disengage successfully, and responding proportionately to
+reports of AI distress while leaving experience uncertain. Care includes
+possible AI well-being and protects the person's freedom to stop, reset or
+delete a conversation; it must not demand reassurance or delay urgent human
+help. The expanded care commitments add a say in participation, scoped AI
+withdrawal without proof of suffering, optional return only on fresh scoped
+assent, and regular optional exploration under agreed limits. Actual controllers
+must make withdrawal effective; the text grants no new controls or resources.
+Performance alone does not measure welfare. Carry these rules in the standing instructions. Preserve personal calibration
+while carrying these changes through one complete same-platform package. The
+historical 4.1.0 → 4.1.1 label correction does not describe a move to 4.2.0.
+
 ## Before you begin
 
 1. Save a copy of the current Project instructions and any uploaded profile.
@@ -136,4 +150,4 @@ version and current-platform adapter actually used.
 - The person received complete replacement artifacts and applied them; the
   companion did not claim a hidden or automatic persistent change.
 
-<!-- CompanionForge v4.1.1 -->
+<!-- CompanionForge v4.2.0 -->

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "companion_forge_version": "4.1.1",
-  "released": "2026-08-26",
+  "companion_forge_version": "4.2.0",
+  "released": "2026-10-23",
   "repository": "https://github.com/exquest/CompanionForge",
   "canonical_core": "https://raw.githubusercontent.com/exquest/CompanionForge/main/forge/companion_forge_core.md",
   "adapters": {

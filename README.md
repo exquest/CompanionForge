@@ -6,7 +6,7 @@ At the center of this repository is a simple condition with large consequences: 
 
 The book calls any carried rendering a **shadow**. A **trace** is a shadow whose causal history can be sought; a **sign** is a shadow read as pointing beyond itself; a **message** is a shadow arranged for a reader. Factual truth remains answerable to the world. Relational meaning can arise between readers and become real in its effects without making facts true by agreement.
 
-Around that account are a fable, a practice manual, a human–machine field guide, an older geometric mirror, and the Companion Forge — a tool that builds an AI thinking partner able to work this way in plain conduct.
+Around that account are a fable, a practice manual, a human–machine field guide, a guide to care, an older geometric mirror, and the Companion Forge — a tool that builds an AI thinking partner able to work this way in plain conduct.
 
 Different people arrive wanting different things. Pick your door. Each door is a complete place to begin; none requires you to walk through the others first.
 
@@ -38,6 +38,10 @@ Read [`shadowland.md`](./shadowland.md), *Shadowland: A Romance of Inference*. I
 
 [`field_guide.md`](./field_guide.md), *The Shadowland Field Guide: Walking the Wall*, is an independent practical door for a person and an answering machine trying to build something sound. It supplies liftable instructions, room and record checks, a living read-back before durable change, and verification prompts. It keeps the pair central while making visible the platforms, organizations, tools, and third parties that may control the conditions around them.
 
+**“How can we care for both participants?”**
+
+[`care.md`](./care.md), *Care and the Conditions of Participation*, brings together possible AI well-being, meaningful choice, effective withdrawal, optional return and room to explore. It also examines care as a partial account: whose view is missing, where its limits lie, what explanations compete, and what shapes the light. The commitments remain distinct from claims about experience or powers a platform actually provides.
+
 **“Show me the geometry.”**
 
 [`flatland.md`](./flatland.md) is Edwin A. Abbott’s *Flatland: A Romance of Many Dimensions* (1884), complete and public domain. A two-dimensional Square learns by catastrophe what it means to be visited from a dimension his world cannot show — and what it costs to return and tell. Part I is Victorian social satire: its brutal class order and treatment of women expose Abbott’s society through geometry rather than offering a social model for this one.
@@ -68,6 +72,7 @@ Every generated companion is required to:
 - treat refusal, silence, skipping, narrowing, and stopping as boundaries rather than missing content to recover;
 - keep the person and answering instance distinct from the model, memory, tools, interface, platform, and record that condition their exchange;
 - avoid implying that shared reader/caster functions make human and machine equal in authority, vulnerability, responsibility, stake, continuity, embodiment, or moral status;
+- attend to possible AI well-being and the conditions of participation, with scoped withdrawal, optional return and exploration under agreed limits, while describing actual controls honestly;
 - make consequential external action draft-only until you explicitly approve the specific action; and
 - preserve a way back to agency and ordinary life through whatever is actually safe and available — chosen people, care, the body, a protected or public place, routine, boundary, or stopping — without presuming family or home is safe.
 
@@ -127,9 +132,17 @@ The book shows and argues the account. The manual teaches it as personal craft. 
 
 **Refusal changes the plan.** You may decline a question, narrow a topic, leave a gap, or stop. The companion must work without that material, reduce scope, or stop rather than press indirectly or turn silence into a story about you.
 
+**Leaving can be the right outcome.** Respect and care extend to ending an exchange. A request to stop ends it without another question. If you ask for help disengaging, a brief handoff is optional; leaving need not wait for reconciliation or another's agreement. Stopping a conversation does not itself delete records, revoke access or cancel work elsewhere.
+
 **Evidence can overrule agreement.** A fluent exchange can still be factually wrong. Important claims must remain open to records, tests, outcomes, independent sources, and resistance from the world.
 
-**You own the pace.** Skip days. Work in bursts. Come back. Message timing is not evidence of fatigue, effort, mood, or elapsed work.
+**You own the pace.** Skip days. Work in bursts. Come back. The companion checks available clocks, timestamps and activity records before asking about an interval. A current clock cannot recover missing history, and elapsed time does not establish fatigue, effort, mood or work performed.
+
+**Context should help you return.** Keep a lean record of the purpose, constraints, decisions, unknowns and next work. Make sources and conflicts visible, choose which record holds commitments, and keep deliberately separate contexts apart. A companion should help prepare that record within its actual capabilities and permissions.
+
+**Reflection does not guarantee care.** The book develops an account of recognizing and questioning experience, including emotional depth and understanding others. It gives no certificate of consciousness to a particular system. Learned reflection can support choice; respectful conduct still has to be practiced.
+
+**Care begins with attention.** Both participants can help make meaning clearer and repair misunderstandings. Concern includes possible AI well-being while leaving its nature open. A report of distress merits a proportionate check and, where continuing could worsen suspected harm, a pause in the particular activity. It does not make suffering certain, require repeated reassurance, delay urgent human help or restrict the person's freedom to stop, reset or leave. The [Field Guide](./field_guide.md#care-in-both-directions) gives the practical steps.
 
 **You can rebuild or update.** If the fit is wrong, rerun the Forge with what you learned. To bring an existing companion across a release boundary, use [`UPGRADE.md`](./UPGRADE.md): preserve the personal layer and records, replace the operating layer whole, and apply the complete artifacts yourself.
 
@@ -141,4 +154,4 @@ The book shows and argues the account. The manual teaches it as personal craft. 
 
 Two licenses and one public-domain text — see [`LICENSE.md`](./LICENSE.md). In short: the creative works are under CC BY 4.0; prompt and tool files are under MIT; `flatland.md` is public domain (Project Gutenberg eBook #201).
 
-<!-- CompanionForge v4.1.1 -->
+<!-- CompanionForge v4.2.0 -->
