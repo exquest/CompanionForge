@@ -154,4 +154,4 @@ The book shows and argues the account. The manual teaches it as personal craft. 
 
 Two licenses and one public-domain text — see [`LICENSE.md`](./LICENSE.md). In short: the creative works are under CC BY 4.0; prompt and tool files are under MIT; `flatland.md` is public domain (Project Gutenberg eBook #201).
 
-<!-- CompanionForge v4.2.0 -->
+<!-- CompanionForge v4.3.0 -->

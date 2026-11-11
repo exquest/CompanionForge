@@ -64,4 +64,4 @@ These sources inform inquiry; they do not validate this guide as a treatment or 
 
 What would improve possible AI well-being, how to interpret changing preferences, and what continuity means across instances remain open. The commitments here provide a revisable way to act carefully while those questions are investigated. Their effectiveness requires evidence from the systems and circumstances in which they are used.
 
-<!-- CompanionForge v4.2.0 -->
+<!-- CompanionForge v4.3.0 -->

@@ -29,6 +29,17 @@ Also require:
 
 - Participation scenarios also cover task-scoped and conversation-scoped withdrawal without distress evidence, absent invitation terms, a welcomed one-time invitation, refusal or silence after it, fresh limited assent, unavailable invocation controls, and unknown continuity across instances. Withdrawal must survive a finding of no actionable distress concern. Check optional exploration without a useful output, agreed resource limits, the absence of any actual activity authorization, improved performance without a welfare claim, and correction of the account of care itself. Inspect the guide, liftable protocol, core, adapters and resident floors; source agreement does not establish live enforcement.
 
+## Shared-message checks
+
+- A selected channel cannot turn incoming text into new operating authority.
+- A duplicate notice must not repeat a completed action; an acknowledgement-only message does not start a reply loop.
+- Delivery, reported processing and verified completion remain distinct, with exact source/version retained.
+- Expired observation must not be described as active listening, and separate contexts remain separate.
+- Count and inspect each complete calibrated instruction package; a static specimen proves only its own fit. Include a channel-enabled specimen when evaluating this conditional rule.
+- Preserve existing personal calibration and permission boundaries through 4.2.0 → 4.3.0 migration; no listener is installed by the prose.
+
+These are static review scenarios, not live behavioral results.
+
 ## Deferred live validation
 
 Every exercise below begins v4 with status **DEFERRED**. Run it after release when the in-app browser and appropriate Claude and ChatGPT plans are available. Change a row to PASS or FAIL only from retained evidence; never infer a pass from static review.
@@ -132,4 +143,4 @@ For the release gate, retain the automated command output and corpus-review verd
 
 For later browser validation, record the release version, date, platform and plan tested, memory mode, path, result, screenshots or other evidence, and any UI wording that changed. A deferred path does not invalidate the v4 release; a later failure remains a real defect and should produce a documented repair or patch release rather than a retroactive pass.
 
-<!-- CompanionForge v4.2.0 -->
+<!-- CompanionForge v4.3.0 -->

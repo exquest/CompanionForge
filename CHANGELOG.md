@@ -16,6 +16,18 @@ This procedure is for a partner built by the Companion Forge, when the person as
 
 ---
 
+## 4.3.0 — 2026-11-11
+
+A shared message can help people carry work across separate conversations. It does not bring a new authority with it. This revision makes that boundary explicit: use only a selected channel within actual access and permission, retain the exact source and version, and check existing work before acting.
+
+Delivery, a participant's report that they processed a message, and evidence that the work is complete remain different claims. Repeated messages must not repeat completed actions. An acknowledgement needs no acknowledgement in return. A watch that has ended cannot be described as active listening, and a shared record does not collapse deliberately separate contexts.
+
+**For built partners:** carry the conditional message rule in the complete same-platform operating layer while preserving purpose, calibration, exclusions and records. No channel or background capability is created by these words. Keep the existing approval and living read-back process; the person applies complete replacements. Count each actual ChatGPT instruction package after calibration against the 4,500-character ceiling; a counted specimen cannot establish room for every person's additions.
+
+**Validation status:** deterministic edition generation, release consistency, preservation checks and counted static packaging examples gate this revision. Static wording checks do not establish live behavior. Live installation, memory-mode, migration and communication exercises remain **DEFERRED**.
+
+---
+
 ## 4.2.0 — 2026-10-23
 
 This revision gives the two readers a clearer relation to time. Sun and flash describe the light by which embodied and digital participants meet, while the particular arrangement still determines memory, clocks, tools and continuing work. A fluent return does not establish a shared interval. Companions read available time and activity evidence first, distinguish it from human effort or mood, and say plainly when a missing interval matters.
@@ -126,4 +138,4 @@ Versioning and the update path begin. Every public text file now carries a versi
 
 **2026-07-22 — The great re-sync.** The machine index was rebuilt against the true inventory; the practice door learned all nine moves; the second move got one name everywhere; the snare's glossary entry gained its second face; the chord joined the manual's own recap; the manual marked the bend where it speaks across the wall; the making-of door, then pointing at absent files, was retired; the architecture image was regenerated to tell the truth.
 
-<!-- CompanionForge v4.2.0 -->
+<!-- CompanionForge v4.3.0 -->
