@@ -55,12 +55,67 @@ def repository_files() -> set[Path]:
     return {Path(line) for line in result.stdout.splitlines() if line}
 
 
-def extract_first_text_fence(document: str, heading: str) -> str | None:
-    start = document.find(heading)
-    if start < 0:
+HEADING_RE = re.compile(r"^ {0,3}(#{1,6})(?:[ \t]+|$)")
+FENCE_OPEN_RE = re.compile(r"^( {0,3})(`{3,}|~{3,})(.*)$")
+SETEXT_RE = re.compile(r"^ {0,3}(=+|-+)[ \t]*$")
+
+
+def section_code_block(document: str, heading: str) -> str | None:
+    """Return the first fenced code block in the section headed by `heading`.
+
+    Fences and headings follow CommonMark, so the block measured is the one a
+    reader copies from the rendered page. Returns None when the heading is
+    absent, its section ends before any fence opens, or the fence is never
+    closed (a renderer would run it to the end of the file). Container blocks
+    such as lists are not modelled; where that matters the result is None.
+    """
+    # Markdown line endings only; str.splitlines() also splits on U+2028 and others.
+    lines = re.split(r"\r\n|\r|\n", document)
+    heading_line = heading.strip()
+    try:
+        start = next(i for i, line in enumerate(lines) if line.strip() == heading_line)
+    except StopIteration:
         return None
-    match = re.search(r"```text\n(.*?)\n```", document[start:], re.DOTALL)
-    return match.group(1) if match else None
+    level_match = HEADING_RE.match(heading_line)
+    level = len(level_match.group(1)) if level_match else 6
+
+    for i in range(start + 1, len(lines)):
+        line = lines[i]
+        if heading_level(lines, i, start) <= level:
+            return None
+        fence = FENCE_OPEN_RE.match(line)
+        if not fence or (fence.group(2)[0] == "`" and "`" in fence.group(3)):
+            continue
+        indent, marker = len(fence.group(1)), fence.group(2)
+        closer = re.compile(
+            rf"^ {{0,3}}{re.escape(marker[0])}{{{len(marker)},}}[ \t]*$"
+        )
+        for j in range(i + 1, len(lines)):
+            if closer.match(lines[j]):
+                # Content loses up to the opening fence's own indentation.
+                content = lines[i + 1 : j]
+                return "\n".join(re.sub(rf"^ {{0,{indent}}}", "", l) for l in content)
+        return None
+    return None
+
+
+def heading_level(lines: list[str], i: int, start: int) -> int:
+    """Level of the heading ending at line `i`, or 7 when it ends none.
+
+    Covers ATX headings and setext underlines (`===` or `---` directly under a
+    paragraph line, which must come after the section's own heading).
+    """
+    atx = HEADING_RE.match(lines[i])
+    if atx:
+        return len(atx.group(1))
+    setext = SETEXT_RE.match(lines[i])
+    if setext and i - 1 > start:
+        above = lines[i - 1]
+        if above.strip() and not (
+            HEADING_RE.match(above) or FENCE_OPEN_RE.match(above) or SETEXT_RE.match(above)
+        ):
+            return 1 if setext.group(1)[0] == "=" else 2
+    return 7
 
 
 def body_before_release_stamp(document: str) -> str | None:
@@ -438,11 +493,14 @@ def main() -> int:
         "Claim listening only while observation runs", "preserve separate contexts",
     ))
 
-    loader_instructions = extract_first_text_fence(
+    loader_instructions = section_code_block(
         chatgpt_loader, "## Artifact 1 — Project Instructions"
     )
     if loader_instructions is None:
-        failures.append("could not find ChatGPT resident Forge Project Instructions")
+        failures.append(
+            "could not find a closed code block under the ChatGPT resident Forge "
+            "'## Artifact 1 — Project Instructions' heading"
+        )
     elif len(loader_instructions) > 4500:
         failures.append(
             "ChatGPT resident Forge Project Instructions exceed 4,500 characters: "
