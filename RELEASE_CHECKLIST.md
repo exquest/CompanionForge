@@ -9,9 +9,10 @@ Run from the repository root:
 ```sh
 python3 tools/build_forge.py --check
 python3 tools/verify_release.py
+python3 -m unittest discover tools
 ```
 
-Both commands must exit successfully. The verifier covers generated-file drift, release stamps at the end of a file and version strings written into the body of one, manifest paths, relative links, platform leakage into the core, required safety and migration contracts, and the 4,500-character budget for the resident ChatGPT Project Instructions.
+All three commands must exit successfully. The verifier covers generated-file drift, release stamps at the end of a file and version strings written into the body of one, manifest paths, relative links, platform leakage into the core, required safety and migration contracts, and the 4,500-character budget for the resident ChatGPT Project Instructions.
 
 Also require:
 
